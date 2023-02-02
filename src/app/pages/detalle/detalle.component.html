@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12 p-2 ">
+            <img src="{{producto.imagen}}" class="detalle__img"  alt="">
+        </div>
+        <div class="col-md-6 col-sm-12 col-xs-12 p-2 col__shadow">
+            <div class="container my-3">
+                <p>{{producto.marca}}</p>
+                <h5 class="text-center">{{producto.nombre}}</h5>
+                <div class="container d-flex justify-content-between"> 
+                    <p [ngClass]="{'text-danger text-decoration-line-through': producto.oferta!=0}">{{producto?.costoUnitario | currency:"S/." }}</p>
+                    <p>{{producto?.oferta | currency:"S/."  }}</p>
+                </div>
+                <div class="container div__detalle my-4">
+                    <p>{{producto.descripcion}}</p>
+                </div>
+                <div class="">
+                    <div class="d-flex gap-3">
+                        <button class="btn btn-success my-2 w-50" (click)="openDialogCarrito()" >Añadir al Carrito</button>
+                        <a routerLink="/pagar" class="btn btn-danger my-2 w-50">Ir a Pagar</a>
+                    </div>
+                    <a class="btn btn-outline-primary mt-4  w-100" routerLink="/productos">Seguir viendo Productos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+.div__bg{
+    background-image: url("https://img.freepik.com/vector-gratis/portatil-isometrico-carrito-compra-teclado_1262-16544.jpg?w=740&t=st=1675225139~exp=1675225739~hmac=bd0988918cc00b91c8ac04df8559b3073bf6ccfc0cb0b44d1e61a6b7f3f59654");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.form__div{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.201) 0px 2px 16px 0px;
+}
+.bg__navbar{
+    background-color: #fff;
+}
+
+.nav__link__a{
+    color: #212529 !important;
+    margin: 0px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 5px 10px !important;
+    text-align: center !important;
+    border-radius: 15px;
+}
+.nav__link__a:hover{
+    color: #d89581 !important;
+    margin: 0px 20px;
+}
+
+.span__logo{
+    color: #212529;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

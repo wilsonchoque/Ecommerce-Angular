@@ -1,0 +1,58 @@
+<div class="container py-3">
+    <div class="container d-flex gap-3 flex-wrap align-items-center">             
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-11 col-sm-12 col-xs-12 ">
+            <mat-card>
+                <mat-card-content>
+                    <form [formGroup]="formRProductos" class="p-2 bg-light"> 
+                        <div class="row">                            
+                            <div class="col-md-6 col-sm-12 col-xs-12 mb-3">
+                                <mat-form-field class="w-100">
+                                    <mat-label>Nombre del Producto</mat-label>
+                                    <input matInput placeholder="" formControlName="nombre">
+                                    <mat-error *ngIf="validacion('nombre')">
+                                        El campo es requerido
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12 mb-3">
+                                <mat-form-field class="w-100">
+                                    <mat-label>URL de imagen</mat-label>
+                                    <input matInput placeholder="" formControlName="imagen">
+                                    <mat-error *ngIf="validacion('imagen')">
+                                        El campo es requerido
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>                            
+                            <div class="col-md-3 col-sm-12 col-xs-12 mb-3">
+                                <mat-form-field class="w-100">
+                                    <mat-label>Precio</mat-label>
+                                    <input matInput placeholder="" formControlName="costoUnitario">
+                                    <mat-error *ngIf="validacion('costoUnitario')">
+                                        El campo es requerido
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>                           
+                            <div class="col-md-3 col-sm-12 col-xs-12 mb-3">
+                                <mat-form-field class="w-100">
+                                    <mat-label>Oferta</mat-label>
+                                    <input matInput placeholder="" formControlName="oferta">
+                                    <mat-error *ngIf="validacion('oferta')">
+                                        El campo es requerido
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>                            
+                            
+                        </div>
+                        <div class="container d-flex justify-content-center gap-3 mb-4 ">
+                            <button mat-raised-button color="primary" class="w-100" [disabled]="formRProductos.invalid" (click)="GuardarProducto()">Guardar</button>
+                        </div>
+                    </form>
+                </mat-card-content>
+              </mat-card>
+           
+        </div>
+    </div>
+    
+</div>

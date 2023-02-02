@@ -1,0 +1,29 @@
+<div class="container-fluid pb-5">
+    <div class="mb-5">
+        <h2 class="text-center fs-2"><span class="fw-bold"> Productos</span></h2>
+    </div>
+    <div class="row d-flex justify-content-center mb-3">
+        <div class="col-md-3 col-sm-6 col-xs-12 mb-5" *ngFor="let producto of listaProductos , index as i ">
+            <div class="card card__div">
+                <a  (click)="irRuta(producto.id)" class="nav-link a__router " >  
+                    <div class="card__img">
+                        <img src="{{producto.imagen}}" class="img py-3" alt="...">                        
+                    </div>
+                </a>
+                <div class="card-body">
+                    <div class="container">
+                        <p class="text-center">{{producto.marca}}</p>
+                    <a (click)="irRuta(producto.id)" class="nav-link a__link text-center a__router" > {{producto.nombre}}</a>
+                    </div>
+                  <div class="container d-flex justify-content-between py-3">
+                    <p class="fw-bold p__precio" [ngClass]="{'text-danger text-decoration-line-through': producto.oferta!=0}">{{producto.costoUnitario | currency:"S/."}}</p>
+                    <p class="fw-bold p__oferta" >{{producto.oferta | currency:"S/."}}</p>
+                  </div>
+                  <div class="container d-flex justify-content-center">
+                    <button  class="btn__carrito fw-bold w-100" (click)="openDialogCarrito(i)" > Añadir a Carrito</button>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

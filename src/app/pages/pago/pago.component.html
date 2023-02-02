@@ -1,0 +1,38 @@
+<app-header></app-header>
+<div class="container" style="margin-top: 100px;">
+    <div class="row py-2">      
+
+
+        <div class="col p-3">
+            <div class="row  mb-3 row__shadow" *ngFor="let itemcarrito of carritoservice.listaItemCarritos , index as i">
+                <div class="col p-3">
+                    <img src="{{itemcarrito.imagen}}" style="width: 100%;" alt="">
+                </div>
+                <div class="col p-3">
+                    <p>{{itemcarrito.nombre}} </p>
+                </div>
+                
+                <div class="col p-3">
+                    <p [ngClass]="{'text-danger text-decoration-line-through':itemcarrito.oferta!=0}" > {{itemcarrito.costoUnitario | currency:"S/."}}</p>
+                </div>
+                <div class="col p-3">
+                    <p>{{itemcarrito.oferta | currency:"S/."}}</p>
+                </div>
+                <div class="col p-3">
+                    <p>{{itemcarrito.cantidad}} </p>
+                </div>
+                <div class="col p-3">
+                    <p>{{itemcarrito.total | currency:"S/."}}</p>
+                </div>
+            </div>
+            <div >
+                <p class="text-end">Total: {{total | currency:"S/."}}</p>
+            </div>            
+        </div>
+
+        <div class="flex-column justify-content-center align-items-center">            
+            <a routerLink="/productos" class="btn btn-primary fw-bold" >Seguir Comprando</a>
+        </div>
+        
+    </div>
+</div>

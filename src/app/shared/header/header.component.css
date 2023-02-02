@@ -1,0 +1,24 @@
+.bg__navbar{
+    background-color: rgb(255, 255, 255);
+}
+
+.span-logo{
+    color: #212529;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.nav-a {
+    color: #212529 !important;
+    margin: 0px 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 5px 10px !important;
+    text-align: center !important;
+    border-radius: 15px;
+    font-family: Arial, Helvetica, sans-serif
+}
+.nav-a:hover{
+    color: #d89581 !important;
+    margin: 0px 10px;    
+}
+
+

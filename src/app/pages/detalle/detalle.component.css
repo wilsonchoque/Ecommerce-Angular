@@ -1,0 +1,16 @@
+.detalle__img{
+    width: 100%;
+    min-height: 400px;
+    max-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.col__shadow{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.201) 0px 2px 16px 0px;
+}
+.div__detalle{
+    min-height: 100px;
+    max-height: 150px ;
+    overflow: auto;
+}

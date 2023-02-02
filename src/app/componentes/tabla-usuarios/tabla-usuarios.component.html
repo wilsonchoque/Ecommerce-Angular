@@ -1,0 +1,31 @@
+<div class="container py-5" style="overflow: auto;">
+    <div class="container py-5">
+        Cada vez que se registrar o hace login con google 
+        se crea un usuario con el rol user y su uid se pasa a la coleccion usuarios 
+        todavia falta implementar el crud usuario 
+        tendria que crear el usuario + la autentificacion en proceso....
+    </div>
+    <table class="table">
+        <thead class="bg-primary bg-opacity-50">
+          <tr  class="text-center" > 
+            <th scope="col">#</th>
+            <th scope="col" style="width: 100px;">UID</th>
+            <th scope="col" style="width: 150px;">EMAIL</th>
+            <th scope="col">FOTO</th>
+            <th scope="col">ROL</th>
+          </tr>
+        </thead>
+        <tbody style="font-size: 0.9rem !important;">
+          <tr class="text-center " style="overflow-x: auto;"  *ngFor="let usuario of listaUsuarios , index as i  ">
+            <td>{{i+1}}</td>
+            <td>{{usuario.id}}</td>
+            <td>{{usuario.email}}</td>
+            <td><img src="{{usuario.photoURL}}" style="width: 20px;" alt=""></td>
+            <td>{{usuario.rol}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="container py-3">
+        <p class="fw-bold">Total de registros: {{listaUsuarios.length}}</p>
+      </div>
+</div>
